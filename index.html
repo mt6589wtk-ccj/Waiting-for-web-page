@@ -4,66 +4,66 @@
     <meta charset="UTF-8">
     <title>巴哈姆特動畫瘋 - 當機</title>
     <style>
+        /* 設定 body 樣式 */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            position: relative;
+            font-family: Arial, sans-serif; /* 字體 */
+            text-align: center; /* 文字置中 */
+            background-color: #f4f4f4; /* 背景顏色 */
+            color: #333; /* 文字顏色 */
+            margin: 0; /* 外距 */
+            padding: 0; /* 內距 */
+            background-image: url('imgs/left-background.png'), url('imgs/right-background.png'); /* 背景圖片 */
+            background-size: 50% 100%, 50% 100%; /* 背景圖片大小 */
+            background-repeat: no-repeat, no-repeat; /* 背景圖片不重複 */
+            background-position: left top, right top; /* 背景圖片位置 */
         }
-
-        .background-left, .background-right {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 50%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url('imgs/background.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+        /* 設定 container 樣式 */
         .container {
-            margin-top: 100px;
+            margin-top: 100px; /* 上方外距 */
         }
+        /* 設定 logo 樣式 */
         .logo {
-            width: 200px;
+            width: 200px; /* 寬度 */
         }
+        /* 設定 message 樣式 */
         .message {
-            font-size: 24px;
-            margin: 20px 0;
+            font-size: 24px; /* 字體大小 */
+            margin: 20px 0; /* 上下外距 */
         }
+        /* 設定 error-code 樣式 */
         .error-code {
-            font-size: 18px;
-            color: #888;
+            font-size: 18px; /* 字體大小 */
+            color: #888; /* 文字顏色 */
         }
+        /* 設定 retry-button 樣式 */
         .retry-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
+            display: inline-block; /* 行內區塊 */
+            margin-top: 20px; /* 上方外距 */
+            padding: 10px 20px; /* 內距 */
+            font-size: 16px; /* 字體大小 */
+            color: #fff; /* 文字顏色 */
+            background-color: #007bff; /* 背景顏色 */
+            border: none; /* 無邊框 */
+            border-radius: 5px; /* 邊框圓角 */
+            cursor: pointer; /* 游標樣式 */
+            text-decoration: none; /* 無文字裝飾 */
         }
+        /* 設定 retry-button 滑鼠懸停樣式 */
         .retry-button:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* 背景顏色 */
         }
     </style>
 </head>
 <body>
-<div class="background-left"></div>
-<div class="background-right"></div>
+<!-- 容器 -->
 <div class="container">
+    <!-- 標誌圖片 -->
     <img src="imgs/logo.png" alt="動畫瘋" class="logo">
+    <!-- 錯誤訊息 -->
     <div class="message">哎呀！網站發生了一些問題。</div>
+    <!-- 錯誤代碼 -->
     <div class="error-code">錯誤代碼：500</div>
+    <!-- 重新整理按鈕 -->
     <a href="javascript:location.reload()" class="retry-button">重新整理</a>
 </div>
 </body>
