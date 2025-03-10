@@ -11,6 +11,20 @@
             color: #333;
             margin: 0;
             padding: 0;
+            position: relative;
+        }
+
+        .background-left, .background-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('imgs/background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .container {
             margin-top: 100px;
@@ -44,6 +58,8 @@
     </style>
 </head>
 <body>
+<div class="background-left"></div>
+<div class="background-right"></div>
 <div class="container">
     <img src="imgs/logo.png" alt="動畫瘋" class="logo">
     <div class="message">哎呀！網站發生了一些問題。</div>
