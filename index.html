@@ -12,10 +12,11 @@
             color: #333; /* 文字顏色 */
             margin: 0; /* 外距 */
             padding: 0; /* 內距 */
-            background-image: url('imgs/left-background.png'), url('imgs/right-background.png'); /* 背景圖片 */
-            background-size: 50% 100%, 50% 100%; /* 背景圖片大小 */
-            background-repeat: no-repeat, no-repeat; /* 背景圖片不重複 */
-            background-position: left top, right top; /* 背景圖片位置 */
+            background-image: url('imgs/left-background.png'), url('imgs/right-background.png'), url('imgs/images.jpg '); /* 背景圖片 */
+            background-size: 50% 100%, 50% 100%, cover; /* 背景圖片大小 */
+            background-repeat: no-repeat, no-repeat , no-repeat; /* 背景圖片不重複 */
+            background-position: left 50px , right 50px , center ; /* 背景圖片位置，向下移動 20px */
+            position: relative; /* 相對定位 */
         }
         /* 設定 container 樣式 */
         .container {
@@ -24,6 +25,8 @@
         /* 設定 logo 樣式 */
         .logo {
             width: 200px; /* 寬度 */
+            filter: grayscale(100%); /* 黑白濾鏡 */
+            border-radius: 15px; /* 圓角 */
         }
         /* 設定 message 樣式 */
         .message {
@@ -52,9 +55,32 @@
         .retry-button:hover {
             background-color: #0056b3; /* 背景顏色 */
         }
+        /* 設定背景文字樣式 */
+        .background-text {
+            position: absolute; /* 絕對定位 */
+            top: 30%; /* 垂直置中 */
+            transform: translateY(-50%); /* 垂直置中 */
+            width: 50%; /* 寬度 */
+            text-align: center; /* 文字置中 */
+            font-size: 24px; /* 字體大小 */
+            color: #fff; /* 文字顏色 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字陰影 */
+            -webkit-text-stroke: 1px #000; /* 黑色文字邊框 */
+            text-stroke: 1px #000; /* 黑色文字邊框 */
+        }
+        .background-text.left {
+            left: 0; /* 左側 */
+        }
+        .background-text.right {
+            right: 0; /* 右側 */
+        }
     </style>
 </head>
 <body>
+<!-- 左側背景文字 -->
+<div class="background-text left">系統正在搶修中請見諒</div>
+<!-- 右側背景文字 -->
+<div class="background-text right">系統正在搶修中請見諒</div>
 <!-- 容器 -->
 <div class="container">
     <!-- 標誌圖片 -->
@@ -62,7 +88,7 @@
     <!-- 錯誤訊息 -->
     <div class="message">哎呀！網站發生了一些問題。</div>
     <!-- 錯誤代碼 -->
-    <div class="error-code">錯誤代碼：500</div>
+    <div class="error-code">請稍後再試</div>
     <!-- 重新整理按鈕 -->
     <a href="javascript:location.reload()" class="retry-button">重新整理</a>
 </div>
