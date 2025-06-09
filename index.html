@@ -4,78 +4,7 @@
     <meta charset="UTF-8">
     <title>巴哈姆特動畫瘋 - 當機</title>
     <script src="index.js" defer></script>
-    <style>
-        /* 設定 body 樣式 */
-        body {
-            font-family: "標楷體", Arial, sans-serif; /* 字體 */
-            text-align: center; /* 文字置中 */
-            background-color: #f4f4f4; /* 背景顏色 */
-            color: #333; /* 文字顏色 */
-            margin: 0; /* 外距 */
-            padding: 0; /* 內距 */
-            background-image: url('imgs/left-background.png'), url('imgs/right-background.png'), url('imgs/images.jpg '); /* 背景圖片 */
-            background-size: 50% 100%, 50% 100%, cover; /* 背景圖片大小 */
-            background-repeat: no-repeat, no-repeat , no-repeat; /* 背景圖片不重複 */
-            background-position: left 50px , right 50px , center ; /* 背景圖片位置，向下移動 20px */
-            position: relative; /* 相對定位 */
-        }
-        /* 設定 container 樣式 */
-        .container {
-            margin-top: 100px; /* 上方外距 */
-        }
-        /* 設定 logo 樣式 */
-        .logo {
-            width: 200px; /* 寬度 */
-            filter: grayscale(100%); /* 黑白濾鏡 */
-            border-radius: 15px; /* 圓角 */
-        }
-        /* 設定 message 樣式 */
-        .message {
-            font-size: 24px; /* 字體大小 */
-            margin: 20px 0; /* 上下外距 */
-        }
-        /* 設定 error-code 樣式 */
-        .error-code {
-            font-size: 18px; /* 字體大小 */
-            color: red; /* 文字顏色 */
-            font-weight: bold; /* 字體加粗 */
-        }
-        /* 設定 retry-button 樣式 */
-        .retry-button {
-            display: inline-block; /* 行內區塊 */
-            margin-top: 20px; /* 上方外距 */
-            padding: 10px 20px; /* 內距 */
-            font-size: 16px; /* 字體大小 */
-            color: #fff; /* 文字顏色 */
-            background-color: #007bff; /* 背景顏色 */
-            border: none; /* 無邊框 */
-            border-radius: 5px; /* 邊框圓角 */
-            cursor: pointer; /* 游標樣式 */
-            text-decoration: none; /* 無文字裝飾 */
-        }
-        /* 設定 retry-button 滑鼠懸停樣式 */
-        .retry-button:hover {
-            background-color: #0056b3; /* 背景顏色 */
-        }
-        /* 設定背景文字樣式 */
-        .background-text {
-            position: absolute; /* 絕對定位 */
-            top: 30%; /* 垂直置中 */
-            transform: translateY(-50%); /* 垂直置中 */
-            width: 50%; /* 寬度 */
-            text-align: center; /* 文字置中 */
-            font-size: 36px; /* 字體大小 */
-            color: #fff; /* 文字顏色 */
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8); /* 文字陰影 */
-            font-weight: bold; /* 字體加粗 */
-        }
-        .background-text.left {
-            left: 0; /* 左側 */
-        }
-        .background-text.right {
-            right: 0; /* 右側 */
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <!-- 背景音樂 -->
 <audio autoplay loop>
@@ -97,6 +26,13 @@
     <div class="error-code">請稍後再試</div>
     <!-- 重新整理按鈕 -->
     <a href="javascript:location.reload()" class="retry-button">重新整理</a>
+</div>
+
+<!-- 動畫問答遊戲 -->
+<div class="quiz-container">
+    <h2 id="question">問題將顯示在這裡</h2>
+    <div id="choices"></div>
+    <div id="feedback"></div>
 </div>
 </body>
 </html>

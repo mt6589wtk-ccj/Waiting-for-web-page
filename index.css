@@ -1,0 +1,116 @@
+/* 設定 body 樣式 */
+body {
+    font-family: "標楷體", Arial, sans-serif; /* 字體 */
+    text-align: center; /* 文字置中 */
+    background-color: #f4f4f4; /* 背景顏色 */
+    color: #333; /* 文字顏色 */
+    margin: 0; /* 外距 */
+    padding: 0; /* 內距 */
+    background-image: url('imgs/left-background.png'), url('imgs/right-background.png'), url('imgs/images.jpg '); /* 背景圖片 */
+    background-size: 50% 100%, 50% 100%, cover; /* 背景圖片大小 */
+    background-repeat: no-repeat, no-repeat , no-repeat; /* 背景圖片不重複 */
+    background-position: left 50px , right 50px , center ; /* 背景圖片位置，向下移動 20px */
+    position: relative; /* 相對定位 */
+}
+/* 設定 container 樣式 */
+.container {
+    margin-top: 100px; /* 上方外距 */
+}
+/* 設定 logo 樣式 */
+.logo {
+    width: 200px; /* 寬度 */
+    filter: grayscale(100%); /* 黑白濾鏡 */
+    border-radius: 15px; /* 圓角 */
+}
+/* 設定 message 樣式 */
+.message {
+    font-size: 24px; /* 字體大小 */
+    margin: 20px 0; /* 上下外距 */
+}
+/* 設定 error-code 樣式 */
+.error-code {
+    font-size: 18px; /* 字體大小 */
+    color: red; /* 文字顏色 */
+    font-weight: bold; /* 字體加粗 */
+}
+/* 設定 retry-button 樣式 */
+.retry-button {
+    display: inline-block; /* 行內區塊 */
+    margin-top: 20px; /* 上方外距 */
+    padding: 10px 20px; /* 內距 */
+    font-size: 16px; /* 字體大小 */
+    color: #fff; /* 文字顏色 */
+    background-color: #007bff; /* 背景顏色 */
+    border: none; /* 無邊框 */
+    border-radius: 5px; /* 邊框圓角 */
+    cursor: pointer; /* 游標樣式 */
+    text-decoration: none; /* 無文字裝飾 */
+}
+/* 設定 retry-button 滑鼠懸停樣式 */
+.retry-button:hover {
+    background-color: #0056b3; /* 背景顏色 */
+}
+/* 設定背景文字樣式 */
+.background-text {
+    position: absolute; /* 絕對定位 */
+    top: 30%; /* 垂直置中 */
+    transform: translateY(-50%); /* 垂直置中 */
+    width: 50%; /* 寬度 */
+    text-align: center; /* 文字置中 */
+    font-size: 36px; /* 字體大小 */
+    color: #fff; /* 文字顏色 */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8); /* 文字陰影 */
+    font-weight: bold; /* 字體加粗 */
+}
+.background-text.left {
+    left: 0; /* 左側 */
+}
+.background-text.right {
+    right: 0; /* 右側 */
+}
+
+/* 設定 quiz-container 樣式 */
+.quiz-container {
+    margin-top: 50px; /* 上方外距 */
+    padding: 20px; /* 內距 */
+    background-color: #fff; /* 背景顏色 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影 */
+    display: inline-block; /* 行內區塊 */
+    text-align: center; /* 文字置中 */
+    width: 80%; /* 寬度 */
+    max-width: 600px; /* 最大寬度 */
+}
+
+/* 設定 quiz-container 問題樣式 */
+#question {
+    font-size: 20px; /* 字體大小 */
+    margin-bottom: 20px; /* 下方外距 */
+}
+
+/* 設定 quiz-container 選項按鈕樣式 */
+.choice-button {
+    display: inline-block; /* 行內區塊 */
+    margin: 10px; /* 外距 */
+    padding: 10px 20px; /* 內距 */
+    font-size: 16px; /* 字體大小 */
+    color: #333; /* 文字顏色 */
+    background-color: #f4f4f4; /* 背景顏色 */
+    border: 1px solid #333; /* 邊框 */
+    border-radius: 5px; /* 圓角 */
+    cursor: pointer; /* 游標樣式 */
+    transition: transform 0.2s ease; /* 動畫效果 */
+}
+
+/* 設定 quiz-container 選項按鈕滑鼠懸停樣式 */
+.choice-button:hover {
+    background-color: #ddd; /* 背景顏色 */
+    transform: scale(1.1); /* 放大效果 */
+}
+
+/* 設定 quiz-container 回饋文字樣式 */
+#feedback {
+    margin-top: 20px; /* 上方外距 */
+    font-size: 18px; /* 字體大小 */
+    font-weight: bold; /* 字體加粗 */
+}
