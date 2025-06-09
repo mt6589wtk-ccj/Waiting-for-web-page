@@ -114,3 +114,37 @@ body {
     font-size: 18px; /* 字體大小 */
     font-weight: bold; /* 字體加粗 */
 }
+
+.volume-control-vertical {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.volume-control-vertical label {
+    margin-bottom: 12px; /* 或你想調整的數值，例如 5px～10px */
+}
+
+
+.volume-control-vertical input[type="range"] {
+    writing-mode: bt-lr; /* 垂直方向 */
+    transform: rotate(270deg); /* 將橫向滑桿轉直立 */
+    height: 100px;
+    margin-top: 5px;
+}
+
+
+
+#volume-slider {
+    margin-left: 10px; /* 左側外距 */
+    cursor: pointer; /* 游標樣式 */
+}
+

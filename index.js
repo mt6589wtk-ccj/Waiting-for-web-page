@@ -182,3 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
     shuffleQuestions(); // 隨機打亂題目
     loadQuestion();
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.querySelector('audio'); // 預設背景音樂元素
+    const volumeSlider = document.getElementById('volumeControl');
+
+    // 設定初始音量
+    audio.volume = volumeSlider.value;
+
+    // 監聽滑桿變動
+    volumeSlider.addEventListener('input', () => {
+        audio.volume = volumeSlider.value;
+    });
+});

@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <!-- 背景音樂 -->
-<audio autoplay loop>
+<audio id="background-audio" autoplay loop>
     <source src="audio/background-music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+<!-- 音量控制滑桿 -->
+<div class="volume-control-vertical">
+    <label for="volumeControl">音量</label>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" orient="vertical">
+</div>
+
 <body>
 <!-- 左側背景文字 -->
 <div class="background-text left">系統正在搶修中請見諒</div>
